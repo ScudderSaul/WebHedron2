@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{001BB0A6-0F4C-4D45-9B6E-7D6B407F6B20}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebHedron2</RootNamespace>
+    <AssemblyName>WebHedron2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="JQueryUIHelpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=1440f6df3b58b47e, processorArchitecture=MSIL">
+      <HintPath>packages\jQueryUIHelpers.Mvc5.3.0.0\lib\net45\JQueryUIHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HedronCode\AcuteGoldenRhombohedronHedron.cs" />
+    <Compile Include="HedronCode\Antiprism2Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism3Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism4Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism5Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism6Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism7Hedron.cs" />
+    <Compile Include="HedronCode\Antiprism8Hedron.cs" />
+    <Compile Include="HedronCode\AntiprismHedron.cs" />
+    <Compile Include="HedronCode\AugmentedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\AugmentedHexagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\AugmentedPentagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\AugmentedSphenocoronaHedron.cs" />
+    <Compile Include="HedronCode\AugmentedTriangularPrismHedron.cs" />
+    <Compile Include="HedronCode\AugmentedTridiminishedIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\AugmentedTruncatedCubeHedron.cs" />
+    <Compile Include="HedronCode\AugmentedTruncatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\AugmentedTruncatedTetrahedronHedron.cs" />
+    <Compile Include="HedronCode\BiaugmentedPentagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\BiaugmentedTriangularPrismHedron.cs" />
+    <Compile Include="HedronCode\BiaugmentedTruncatedCubeHedron.cs" />
+    <Compile Include="HedronCode\BigyrateDiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\BilunabirotundaHedron.cs" />
+    <Compile Include="HedronCode\CsaszarPolyhedronHedron.cs" />
+    <Compile Include="HedronCode\CubeFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeFourCompound26Hedron.cs" />
+    <Compile Include="HedronCode\CubeFourCompound27Hedron.cs" />
+    <Compile Include="HedronCode\CubeFourCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeHedron.cs" />
+    <Compile Include="HedronCode\CubeOctahedronCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeOctahedronFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeOctahedronThreeCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeSixCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeTenCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeThreeCompoundHedron.cs" />
+    <Compile Include="HedronCode\CubeTwoCompoundHedron.cs" />
+    <Compile Include="HedronCode\CuboctahedronHedron.cs" />
+    <Compile Include="HedronCode\CumulatedCubeHedron.cs" />
+    <Compile Include="HedronCode\CumulatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\CumulatedTetrahedronHedron.cs" />
+    <Compile Include="HedronCode\DeltoidalHexecontahedronHedron.cs" />
+    <Compile Include="HedronCode\DeltoidalIcositetrahedronHedron.cs" />
+    <Compile Include="HedronCode\DiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\Dipyramid42Hedron.cs" />
+    <Compile Include="HedronCode\Dipyramid43Hedron.cs" />
+    <Compile Include="HedronCode\DipyramidHedron.cs" />
+    <Compile Include="HedronCode\DisdyakisDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\DisdyakisTriacontahedronHedron.cs" />
+    <Compile Include="HedronCode\DisphenocingulumHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronIcosahedronCompoundHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronSixCompoundHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronSmallTriambicIcosahedronCompoundHedron.cs" />
+    <Compile Include="HedronCode\DodecahedronTwoCompoundHedron.cs" />
+    <Compile Include="HedronCode\DuerersSolidHedron.cs" />
+    <Compile Include="HedronCode\EchidnahedronHedron.cs" />
+    <Compile Include="HedronCode\ElongatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalCupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalDipyramidHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalGyrobicupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalGyrobirotundaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalGyrocupolarotundaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalOrthobicupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalOrthobirotundaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalOrthocupolarotundaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalPyramidHedron.cs" />
+    <Compile Include="HedronCode\ElongatedPentagonalRotundaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedSquareCupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedSquareDipyramidHedron.cs" />
+    <Compile Include="HedronCode\ElongatedSquareGyrobicupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedSquarePyramidHedron.cs" />
+    <Compile Include="HedronCode\ElongatedTriangularCupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedTriangularDipyramidHedron.cs" />
+    <Compile Include="HedronCode\ElongatedTriangularGyrobicupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedTriangularOrthobicupolaHedron.cs" />
+    <Compile Include="HedronCode\ElongatedTriangularPyramidHedron.cs" />
+    <Compile Include="HedronCode\EschersSolidHedron.cs" />
+    <Compile Include="HedronCode\GreatDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\GreatIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\GreatRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\GreatRhombicTriacontahedronHedron.cs" />
+    <Compile Include="HedronCode\GreatRhombicuboctahedronHedron.cs" />
+    <Compile Include="HedronCode\GreatStellatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\GyrateBidiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\GyrateRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\GyrobifastigiumHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalBicupolaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalBirotundaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalCupolaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalCupolarotundaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalPyramidHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedPentagonalRotundaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedSquareBicupolaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedSquareCupolaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedSquareDipyramidHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedSquarePyramidHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedTriangularBicupolaHedron.cs" />
+    <Compile Include="HedronCode\GyroelongatedTriangularCupolaHedron.cs" />
+    <Compile Include="HedronCode\HebesphenomegacoronaHedron.cs" />
+    <Compile Include="HedronCode\Hedronbase.cs" />
+    <Compile Include="HedronCode\HedronList.cs" />
+    <Compile Include="HedronCode\HVector.cs" />
+    <Compile Include="HedronCode\IcosahedronFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\IcosahedronHedron.cs" />
+    <Compile Include="HedronCode\IcosahedronSixCompoundHedron.cs" />
+    <Compile Include="HedronCode\IcosahedronTwoCompoundHedron.cs" />
+    <Compile Include="HedronCode\IcosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\JessensOrthogonalIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\MathematicaPolyhedronHedron.cs" />
+    <Compile Include="HedronCode\MetabiaugmentedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\MetabiaugmentedHexagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\MetabiaugmentedTruncatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\MetabidiminishedIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\MetabidiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\MetabigyrateRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\MetagyrateDiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ObtuseGoldenRhombohedronHedron.cs" />
+    <Compile Include="HedronCode\OctahedronFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\OctahedronFourCompound115Hedron.cs" />
+    <Compile Include="HedronCode\OctahedronFourCompound116Hedron.cs" />
+    <Compile Include="HedronCode\OctahedronFourCompoundHedron.cs" />
+    <Compile Include="HedronCode\OctahedronHedron.cs" />
+    <Compile Include="HedronCode\OctahedronTenCompoundHedron.cs" />
+    <Compile Include="HedronCode\OctahedronThreeCompoundHedron.cs" />
+    <Compile Include="HedronCode\ParabiaugmentedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ParabiaugmentedHexagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\ParabiaugmentedTruncatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ParabidiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ParabigyrateRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\ParagyrateDiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\PentagonalCupolaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalGyrobicupolaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalGyrocupolarotundaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalHexecontahedronHedron.cs" />
+    <Compile Include="HedronCode\PentagonalIcositetrahedronHedron.cs" />
+    <Compile Include="HedronCode\PentagonalOrthobicupolaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalOrthobirotundaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalOrthocupolarotundaHedron.cs" />
+    <Compile Include="HedronCode\PentagonalPrismSixCompoundHedron.cs" />
+    <Compile Include="HedronCode\PentagonalRotundaHedron.cs" />
+    <Compile Include="HedronCode\PentakisDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\Prism136Hedron.cs" />
+    <Compile Include="HedronCode\Prism137Hedron.cs" />
+    <Compile Include="HedronCode\Prism138Hedron.cs" />
+    <Compile Include="HedronCode\Prism139Hedron.cs" />
+    <Compile Include="HedronCode\Prism140Hedron.cs" />
+    <Compile Include="HedronCode\Prism141Hedron.cs" />
+    <Compile Include="HedronCode\Prism142Hedron.cs" />
+    <Compile Include="HedronCode\PrismHedron.cs" />
+    <Compile Include="HedronCode\Pyramid143Hedron.cs" />
+    <Compile Include="HedronCode\Pyramid144Hedron.cs" />
+    <Compile Include="HedronCode\PyramidHedron.cs" />
+    <Compile Include="HedronCode\RhombicDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\RhombicDodecahedronStellation146Hedron.cs" />
+    <Compile Include="HedronCode\RhombicDodecahedronStellation147Hedron.cs" />
+    <Compile Include="HedronCode\RhombicDodecahedronStellationHedron.cs" />
+    <Compile Include="HedronCode\RhombicEnneacontahedronHedron.cs" />
+    <Compile Include="HedronCode\RhombicHexecontahedronHedron.cs" />
+    <Compile Include="HedronCode\RhombicIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\RhombicTriacontahedronHedron.cs" />
+    <Compile Include="HedronCode\SmallRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\SmallRhombicuboctahedronHedron.cs" />
+    <Compile Include="HedronCode\SmallStellatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\SmallTriakisOctahedronHedron.cs" />
+    <Compile Include="HedronCode\SmallTriambicIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\SnubCubeHedron.cs" />
+    <Compile Include="HedronCode\SnubDisphenoidHedron.cs" />
+    <Compile Include="HedronCode\SnubDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\SnubSquareAntiprismHedron.cs" />
+    <Compile Include="HedronCode\SphenocoronaHedron.cs" />
+    <Compile Include="HedronCode\SphenomegacoronaHedron.cs" />
+    <Compile Include="HedronCode\SquareCupolaHedron.cs" />
+    <Compile Include="HedronCode\SquareGyrobicupolaHedron.cs" />
+    <Compile Include="HedronCode\SquareOrthobicupolaHedron.cs" />
+    <Compile Include="HedronCode\SquashedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\StellaOctangulaHedron.cs" />
+    <Compile Include="HedronCode\SzilassiPolyhedronHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronFiveCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronFourCompound171Hedron.cs" />
+    <Compile Include="HedronCode\TetrahedronFourCompound172Hedron.cs" />
+    <Compile Include="HedronCode\TetrahedronFourCompound173Hedron.cs" />
+    <Compile Include="HedronCode\TetrahedronFourCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronSixCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronTenCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronThreeCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrahedronTwoCompoundHedron.cs" />
+    <Compile Include="HedronCode\TetrakisHexahedronHedron.cs" />
+    <Compile Include="HedronCode\TriakisIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\TriakisTetrahedronHedron.cs" />
+    <Compile Include="HedronCode\TriangularCupolaHedron.cs" />
+    <Compile Include="HedronCode\TriangularHebesphenorotundaHedron.cs" />
+    <Compile Include="HedronCode\TriangularOrthobicupolaHedron.cs" />
+    <Compile Include="HedronCode\TriaugmentedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\TriaugmentedHexagonalPrismHedron.cs" />
+    <Compile Include="HedronCode\TriaugmentedTriangularPrismHedron.cs" />
+    <Compile Include="HedronCode\TriaugmentedTruncatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\TridiminishedIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\TridiminishedRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\TrigyrateRhombicosidodecahedronHedron.cs" />
+    <Compile Include="HedronCode\TruncatedCubeHedron.cs" />
+    <Compile Include="HedronCode\TruncatedDodecahedronHedron.cs" />
+    <Compile Include="HedronCode\TruncatedIcosahedronHedron.cs" />
+    <Compile Include="HedronCode\TruncatedOctahedronHedron.cs" />
+    <Compile Include="HedronCode\TruncatedTetrahedronHedron.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\HedronModel.cs" />
+    <Compile Include="Tools\LocalPallete.cs" />
+    <Compile Include="Tools\Mvt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\jquery-ui.structure.css" />
+    <Content Include="Content\themes\base\jquery-ui.structure.min.css" />
+    <Content Include="Content\themes\base\jquery-ui.theme.css" />
+    <Content Include="Content\themes\base\jquery-ui.theme.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\HedronsTwo.pubxml" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.1.0.js" />
+    <Content Include="Scripts\jquery-3.1.0.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.js" />
+    <Content Include="Scripts\jquery-ui-1.12.0.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery-3.1.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.1.0.min.map" />
+    <Content Include="Scripts\jquery-ui.unobtrusive-3.0.0.js" />
+    <Content Include="Scripts\jquery-ui.unobtrusive-3.0.0.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml">
+      <SubType>
+      </SubType>
+    </Content>
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ShowHedron.cshtml" />
+    <Content Include="Views\Home\_CreateHedron.cshtml" />
+    <Content Include="Views\Home\ShowHedrons.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61783</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61783/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Hedrons";
+}
+
+<div class="jumbotron">
+    <h1>Hedrons</h1>
+     
+</div>
+
+@using (Html.BeginForm("ShowHedron", "Home", FormMethod.Post))
+{
+
+    <fieldset>
+
+        Hedron Type
+
+        @Html.DropDownList("selecthedron")
+        
+        Opacity
+
+        @Html.DropDownList("opacity")
+        <p>
+
+            <input type="submit" value="Submit" />
+
+        </p>
+    
+        <script>
+            document.getElementById("selecthedron").focus();
+
+        </script>
+
+    </fieldset>
+
+}
+
+
+
+

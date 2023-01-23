@@ -1,0 +1,18 @@
+﻿@using System.Reflection.Emit
+@using WebHedron2.Tools
+
+@model WebHedron2.Tools.HedronModelText
+
+
+
+<div>
+
+    <svg height="400" width="400">
+        
+        @foreach (PolygonText pt in Model.PolygonTextList)
+            {
+            <polygon points="@pt.AllPoints"
+                     style="fill: @pt.Fill; stroke: @pt.StrokeColor; stroke-width: @pt.StrokeThick" />
+        }
+    </svg>
+</div>
